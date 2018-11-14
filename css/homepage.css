@@ -28,69 +28,6 @@ body {
     font-family: sans-serif;
 }
 
-
-
-/********************* Header **************************/
-
-/*header {*/
-    /*display: flex;*/
-    /*flex-flow: row nowrap;*/
-    /*justify-content: space-between;*/
-    /*align-items: center;*/
-    /*height: 10vh;*/
-    /*width: 100vw;*/
-    /*position: fixed;*/
-    /*top: 0; left: 0; right: 0;*/
-    /*background-color: white;*/
-/*}*/
-header > img {
-    padding-left: 20px;
-    flex-shrink: 1;
-}
-header > nav > ul {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 30px;
-    flex-shrink: 2;
-}
-header > nav > ul > li {
-    margin: 0px 10px;
-    font-size: 1.1rem;
-    letter-spacing: .125rem;
-}
-div.header-btn-container {
-    width: 10%;
-    flex-shrink: 1;
-}
-button {
-    background-color: #9cffde;
-    text-transform: uppercase;
-    margin: 0 auto;
-    font-family: sans-serif;
-    display: block;
-    letter-spacing: .15em;
-}
-button:hover {
-    background-color: #000000;
-    color: #9cffde;
-}
-header > div.header-btn-container > button {
-    width: border-box;
-    padding: 10px 20px;
-}
-header > nav {
-    width: 70%
-}
-header > img {
-    width: 20%;
-}
-/* Social links in nav */
-nav > ul > li > img {
-    height: 1.5rem;
-}
-
 /************** HERO ********************/
 section.home-hero {
     position: relative;

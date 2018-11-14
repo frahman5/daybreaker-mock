@@ -1,0 +1,119 @@
+/********************* Header **************************/
+header > * {
+    border: 2px dashed hotpink;
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color: white;
+    border: 2px groove green;
+    display:inline-block;
+    line-height: 0;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+#header-logo {
+    width: 42vw;
+    vertical-align: middle;
+    /*position: absolute;*/
+    /*left: 12px;*/
+}
+
+header > button {
+    background-color: #9cffde;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    width: 6vw;
+    position: absolute;
+    right: 20vw;
+    vertical-align: middle;
+}
+
+#header-mobile-menu {
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    right: 0;
+    vertical-align: middle;
+    border-left: 1px solid grey;
+}
+
+
+button:hover {
+    background-color: #000000;
+    color: #9cffde;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*header > nav > ul {*/
+/*display: flex;*/
+/*flex-flow: row nowrap;*/
+/*align-items: center;*/
+/*justify-content: flex-end;*/
+/*padding-right: 30px;*/
+/*flex-shrink: 2;*/
+/*}*/
+/*header > nav > ul > li {*/
+/*margin: 0px 10px;*/
+/*font-size: 1.1rem;*/
+/*letter-spacing: .125rem;*/
+/*}*/
+/*div.header-btn-container {*/
+/*width: 10%;*/
+/*flex-shrink: 1;*/
+/*}*/
+
+/*header > div.header-btn-container > button {*/
+/*width: border-box;*/
+/*padding: 10px 20px;*/
+/*}*/
+/*header > nav {*/
+/*width: 70%*/
+/*}*/
+/*header > img {*/
+/*width: 20%;*/
+/*}*/
+/* Social links in nav */
+/*nav > ul > li > img {*/
+/*height: 1.5rem;*/
+/*}*/
