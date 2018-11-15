@@ -20,7 +20,7 @@ html {
     height: 60vh;
 }
 
-/************************* HANDLING THE VIDEO ********************************/
+    /*********** HANDLING THE VIDEO ***********/
 /* At the smallest screen sizes, we use a background image, no video. At 760px, we
 switch to the vdeio. At 1280px, we fix the height of the video so that it doesn't
 grow outside of its container in an attempt to preserve its aspect ratio. */
@@ -52,116 +52,112 @@ grow outside of its container in an attempt to preserve its aspect ratio. */
     }
 }
 
+    /********** MAIN HERO *********************/
+/* The purpose of the <main> container is to hold the necessary space to properly
+center the splash content */
 .idx-hero > main {
+    /* Occupy the entire below-nav/above-the-fold space */
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    max-height: 90vh;
-    width: 100vw;
+
+    /* Center the splash content within itself */
     display: flex;
     align-items: center;
     justify-content: center;
-    /*border: 5px dashed blue;*/
 }
-.splash-container {
-    max-width: 96%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    min-height: 35vh;
-    font-family: sans-serif;
-    text-align: center;
-    /*border: 5px groove green;*/
-}
-
+/* Overlap a black color */
 .blk-overlay {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
-    /*border: 5px groove orange;*/
     background-color: rgba(0, 0, 0, 0.4);
+}
+/* Center items horizontally within the splash area */
+.splash-container {
+    position: absolute; /* Draw this OVER blk-overlay, rather than after it */
+
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+
+    text-transform: uppercase;
+    text-align: center; /* For when text wraps to a second line */
 }
 .splash-container > img {
     width: 18vw;
-    height: auto;
     margin-bottom:4rem;
 }
 h1 {
     font-size: 3.5rem;
+    font-weight: 400;
     letter-spacing: 1.75px;
     line-height: 3rem;
     color: white;
+
     margin-bottom: 3rem;
-    font-weight: 400;
+
 }
 h2 {
-    color: #DCDCDC;
     font-size: 3vw;
-    margin-bottom: 3rem;
-    letter-spacing: .4rem;
     font-weight: 200;
+    letter-spacing: .4rem;
     line-height: 2.5rem;
-    text-align: center;
-    text-transform: uppercase;
+    color: #DCDCDC;
+
+    margin-bottom: 3rem;
+}
+h3 {
+    font-size: 2.5vw;
+    font-weight: 400;
+    letter-spacing: .3rem;
+    color: #D8D8D8;
+
+    margin-top: 3rem;
+}
+#splashdetail1break {
+    display: inline; /* At smaller screen sizes, there should be a line break */
+}
+#splashdetailverticalbar {
+    display: none; /* When detail 1 on two lines, don't display this bar */
 }
 #form-standin-homepage {
     padding: 20px 100px;
     background-color: white;
     max-width: 90%;
 }
-h3 {
-    color: #D8D8D8;
-    font-size: 2.5vw;
-    letter-spacing: .3rem;
-    font-weight: 400;
-    margin-top: 3rem;
-    text-transform: uppercase;
-}
-#splashdetail1break {
-    display: inline;
-}
-#splashdetailverticalbar {
-    display: none;
-}
+    /*** HERO AT MIDDLE TO LARGE SCREEN SIZES **/
 @media (min-width: 700px) {
     .splash-container > img {
         width: 6vw;
+
         margin-bottom: 3rem;
     }
-
     h1 {
         font-size: 8.25rem;
+        font-weight: 700;
         letter-spacing: 2.5px;
         line-height: 1;
-        margin-bottom: 2rem;
-        font-weight: 700;
-    }
 
+        margin-bottom: 2rem;
+    }
     h2 {
         font-size: 2.625rem;
     }
-
+    h3 {
+        font-size: 1.25rem;
+    }
     #splashdetail1break {
-        display: none;
+        display: none; /* At larger screen sizes, no line break here */
     }
-
     #splashdetailverticalbar {
-        display: inline;
+        display: inline; /* At larger screen sizes, display this seperator */
     }
-
     .splash-h2-vertbar {
         vertical-align: text-top;
     }
-
     #form-standin-homepage {
         padding: 20px 300px;
     }
-
-    h3 {
-        font-size: 1.25rem;
-
-    }
 }
-
 
 /*!* Homepage Events section *!*/
 /*.home-events {*/
