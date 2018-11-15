@@ -1,47 +1,58 @@
-/* Reset */
-
+/* Set the root font-size and font family for rems */
 html {
     font-size: 8px;
-}
-
-/********** DEBUGGING *************/
-/*body {*/
-    /*!*border: 5px dashed blue;*!*/
-/*}*/
-
-body {
     font-family: sans-serif;
 }
 
-/************** HERO ********************/
-section.home-hero {
+/********************************** HERO *************************************/
+.idx-hero {
+    /* Apply position so that the <main> element can position itself against this */
     position: relative;
+
+    /* Bckground */
     background-image: url("../assets/img/dybrkr_home_background_image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    /* Sizing */
     width: 100vw;
     height: 60vh;
-    top: 10vh;
-    /*border: 5px dashed salmon;*/
 }
-.home-hero > video {
+
+/************************* HANDLING THE VIDEO ********************************/
+/* At the smallest screen sizes, we use a background image, no video. At 760px, we
+switch to the vdeio. At 1280px, we fix the height of the video so that it doesn't
+grow outside of its container in an attempt to preserve its aspect ratio. */
+.idx-hero > video {
     display: none;
 }
 @media (min-width: 760px) {
-    .home-hero > video {
+    .idx-hero > video {
         width: 100vw;
         display: block;
-        object-fit: cover;
+        object-fit: fill;
         object-position: center;
     }
 
-    section.home-hero {
+    .idx-hero {
         background-image: none;
+
+        /* Take up however much space it needs for content, and no more.
+        This ensures you don't have weird mismatches when the video is
+        shorter than the full viewport height (minus the header) due to
+        its fixed aspect ratio */
         height: auto;
     }
 }
-.home-hero > main {
+@media (min-width: 1280px) {
+    .idx-hero > video {
+        /* Set height to 90vh so that video + header equals 100vh */
+        height: 90vh;
+    }
+}
+
+.idx-hero > main {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     max-height: 90vh;
@@ -150,15 +161,7 @@ h3 {
 
     }
 }
-@media (min-width: 1280px) {
-    .home-hero > video {
-        width: 100vw;
-        height: 90vh;
-        display: block;
-        object-fit: fill;
-        object-position: center;
-    }
-}
+
 
 /*!* Homepage Events section *!*/
 /*.home-events {*/

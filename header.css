@@ -1,21 +1,9 @@
 /********************* Header **************************/
-header > * {
-    /*border: 2px dashed hotpink;*/
-}
-
-/* Reset */
-button {
-    border-color: none;
-    border-style: none;
-    border-width: 0;
-}
 
 header {
     /* Position, size, color */
     height: 10vh;
     width: 100vw;
-    position: fixed;
-    top: 0; left: 0;
     background-color: white;
 
     /* Alignment */
@@ -23,9 +11,6 @@ header {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-
-    /* Debug */
-    /*border: 2px groove green;*/
 }
 
 #header-logo {

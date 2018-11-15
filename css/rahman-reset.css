@@ -12,3 +12,9 @@ video {
 ul {
     list-style: none;
 }
+
+button {
+    border-color: none;
+    border-style: none;
+    border-width: 0;
+}
