@@ -41,7 +41,7 @@ header {
 }
 
 #header-flex-right-container {
-    width: 170px;
+    width: 180px;
     height: 10vh;
     display: flex;
     flex-flow: row nowrap;
@@ -49,19 +49,83 @@ header {
     align-items: center;
 }
 
+#header-flex-right-container > nav {
+    display: none;
+}
 
-header > #header-flex-right-container > button {
+
+#header-flex-right-container > button {
     /* Look&Feel, size */
     background-color: #9cffde;
     text-transform: uppercase;
     letter-spacing: .15em;
-    width: 80px;
+    width: 90px;
     height: 30px;
+    font-size: 1.5rem;
 
     /* Positioning */
     margin-left: 13px;
     margin-right: 13px;
+
+    /*border: 1px dashed blue;*/
 }
+
+@media (min-width: 1024px) {
+    #header-flex-right-container > nav {
+        display: inline-block;
+        /*border: 1px dashed orange;*/
+        width: 90%;
+    }
+
+    #header-flex-right-container > nav > ul {
+        width: 100%;
+        /*border: 1px dashed aqua;*/
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.8rem;
+    }
+
+    #header-flex-right-container > nav > ul > li > img {
+        display: none;
+        height: 2.2rem;
+
+    }
+
+    .header-social-icon {
+        order: -1; /* Put social icons on the left. Since they're invisible, they'll push the real content a bit to the right, creating the distance we need from the logo */
+    }
+
+    #header-flex-right-container {
+        /*width: 716px; !* Precisely the amount of space between the logo and the right-edge at 1024 px *!*/
+        width: 800px;
+    }
+    #header-mobile-menu {
+        display: none;
+    }
+
+    #header-flex-right-container > button {
+        margin-right: 25px;
+        margin-left: 40px;
+        font-size: 1.8rem;
+        width: 105px;
+        height: 32px;
+    }
+}
+
+@media (min-width: 1180px) {
+     /* Bring in the ocial icons */
+    #header-flex-right-container > nav > ul > li > img {
+        height: 2.2rem;
+        display: inline-block;
+    }
+
+    .header-social-icon {
+        order: 10; /* Put them back on the right */
+    }
+}
+
 
 #header-mobile-menu {
     width: 54px;
@@ -72,7 +136,6 @@ header > #header-flex-right-container > button {
     padding-top: 2vh;
     padding-bottom: 2vh;
 }
-
 
 button:hover {
     background-color: #000000;

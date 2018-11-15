@@ -1,19 +1,4 @@
 /* Reset */
-* {
-    /*border: 2px dashed hotpink;*/
-    /*border: 0;*/
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-video {
-    object-fit: none;
-}
-
-ul {
-    list-style: none;
-}
 
 html {
     font-size: 8px;
@@ -77,6 +62,7 @@ section.home-hero {
     text-align: center;
     /*border: 5px groove green;*/
 }
+
 .blk-overlay {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
@@ -151,6 +137,10 @@ h3 {
         display: inline;
     }
 
+    .splash-h2-vertbar {
+        vertical-align: text-top;
+    }
+
     #form-standin-homepage {
         padding: 20px 300px;
     }
@@ -165,7 +155,7 @@ h3 {
         width: 100vw;
         height: 90vh;
         display: block;
-        object-fit: cover;
+        object-fit: fill;
         object-position: center;
     }
 }
