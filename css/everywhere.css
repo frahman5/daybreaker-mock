@@ -12,37 +12,37 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+    /*** Header Logo ***/
+    /* As the screen gets bigger, make the logo bigger */
 #header-logo {
     width: 42vw;
     margin-left: 15px;
 }
-
 @media (min-width: 600px) {
     #header-logo {
         width: 339px;
         height: 6vh;
     }
 }
-
+    /* Hold Nav + Tix button in a container so we can lay
+    them out together using flexbox */
 #header-flex-right-container {
+    /* Size it right for small screens */
     width: 180px;
     height: 10vh;
+
+    /* Align the nav and Tix button appropiately */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
-
+    /* At small screen sizes, we go hamburger menu, not full nav */
 #header-flex-right-container > nav {
     display: none;
 }
-
-
 #header-flex-right-container > button {
     /* Look&Feel, size */
-    background-color: #9cffde;
-    text-transform: uppercase;
     letter-spacing: .15em;
     width: 90px;
     height: 30px;
@@ -51,80 +51,58 @@ header {
     /* Positioning */
     margin-left: 13px;
     margin-right: 13px;
-
-    /*border: 1px dashed blue;*/
 }
-
+    /* At 2014 pixels, swap out the hamburger icon for a full fledged nav */
 @media (min-width: 1024px) {
+    #header-mobile-menu { display: none; }
+    #header-flex-right-container { width: 800px; /* Trial and Error */ }
     #header-flex-right-container > nav {
         display: inline-block;
-        /*border: 1px dashed orange;*/
         width: 90%;
     }
-
     #header-flex-right-container > nav > ul {
+        /* Take up the entire nav container */
         width: 100%;
-        /*border: 1px dashed aqua;*/
+
+        /* Line up the nav elements */
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+
         font-size: 1.8rem;
     }
-
-    #header-flex-right-container > nav > ul > li > img {
-        display: none;
+    /* Put social nav icons to the left for spacing reasons */
+    .header-nav-social-icon {
+        order: -1; /
+    }
+    .header-nav-social-icon > img {
+        display: none; /* Don't display. Screen still too small */
         height: 2.2rem;
-
     }
-
-    .header-social-icon {
-        order: -1; /* Put social icons on the left. Since they're invisible, they'll push the real content a bit to the right, creating the distance we need from the logo */
-    }
-
-    #header-flex-right-container {
-        /*width: 716px; !* Precisely the amount of space between the logo and the right-edge at 1024 px *!*/
-        width: 800px;
-    }
-    #header-mobile-menu {
-        display: none;
-    }
-
     #header-flex-right-container > button {
+        height: 32px;
+        width: 105px;
         margin-right: 25px;
         margin-left: 40px;
+
         font-size: 1.8rem;
-        width: 105px;
-        height: 32px;
     }
 }
-
 @media (min-width: 1180px) {
-     /* Bring in the ocial icons */
-    #header-flex-right-container > nav > ul > li > img {
-        height: 2.2rem;
-        display: inline-block;
-    }
-
-    .header-social-icon {
+     /* Bring in the social icons */
+    .header-nav-social-icon {
         order: 10; /* Put them back on the right */
     }
+    .header-nav-social-icon > img {
+        display: inline-block; /* Display them */
+    }
 }
-
-
 #header-mobile-menu {
-    width: 54px;
-    padding-left: 13px;
-    padding-right: 13px;
-    border-left: 1px solid #e3e3e3;
     height: 10vh;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-}
-
-button:hover {
-    background-color: #000000;
-    color: #9cffde;
+    width: 54px; /* Width + L/R padding carefully calibrated */
+    padding: 2vh 13px 2vh 13px;
+    border-left: 1px solid #e3e3e3;
 }
 
 

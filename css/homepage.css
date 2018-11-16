@@ -4,6 +4,16 @@ html {
     font-family: sans-serif;
 }
 
+/* Basic Button action everywhere */
+button {
+    background-color: #9cffde;
+    text-transform: uppercase;
+}
+button:hover {
+    background-color: #000000;
+    color: #9cffde;
+}
+
 /********************************** HERO *************************************/
 .idx-hero {
     /* Apply position so that the <main> element can position itself against this */
@@ -158,25 +168,3 @@ h3 {
         padding: 20px 300px;
     }
 }
-
-/*!* Homepage Events section *!*/
-/*.home-events {*/
-    /*background-color: rgb(249,249,249)*/
-/*}*/
-/*.home-events > img {*/
-    /*margin: 10px auto;*/
-    /*display: block;*/
-    /*max-width: 80%;*/
-/*}*/
-/*.home-events-container {*/
-    /*margin: 0px auto;*/
-    /*width: 80vw;*/
-    /*height: 200px;*/
-    /*background-color: green;*/
-/*}*/
-/*.home-events > button {*/
-    /*font-size: 2.125rem;*/
-    /*font-weight: 400;*/
-    /*padding: .85em 1.375em;*/
-    /*margin: 2rem auto;*/
-/*}*/
