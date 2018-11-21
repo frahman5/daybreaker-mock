@@ -1,0 +1,274 @@
+
+/***************************** UPCOMING EVENTS *************************************/
+.home-events {
+    background-color: rgb(249,249,249);
+
+    /* Add padding so background goes sufficiently above header image and bottom button */
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+/* Container for the home events section */
+.home-events-container {
+    margin: 30px auto;
+    width: 80vw;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /*border: 2px dashed orange;*/
+}
+@media (min-width: 736px) {
+    .home-events-container {
+        width: 90%;
+    }
+}
+/* Header Image in Events Section */
+.home-events > img {
+    margin: 0 auto;
+    display: block;
+    max-width: 70%;
+    /*border: 2px dashed red;*/
+}
+/* Faint, nearly invisible border on any event card */
+.large-home-event, .small-home-event {
+    border: 5px solid rgba(255,255,255,.2);
+}
+.large-home-event:hover, .small-home-event:hover {
+    border: 5px solid #9cffde;
+}
+/* Large Home Event sizing and display properties */
+.large-home-event {
+    width: 97%;
+    margin-bottom: 5%;
+
+    /*border: 2px dashed hotpink;*/
+}
+/* Small Home Event sizing and display properties */
+.small-home-event {
+    width: 46%;
+    margin-bottom: 5rem;
+}
+@media (min-width: 736px) {
+    .large-home-event {
+        width: 47.5%;
+        display: inline-block;
+        margin-bottom: 3rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .small-home-event {
+        width: 22.5%;
+    }
+}
+/* Card Styles */
+.card {
+    box-shadow: 0 3px 26px -4px rgba(0,0,0,.13);
+}
+.white-card {
+    background-color: #fff;
+    overflow: hidden; /* Why */
+    position: relative;
+}
+.large-home-event .white-card {
+    width: 100%;
+    height: 60vw;
+    text-align: center;
+    /*border: 2px dashed orange;*/
+}
+@media (min-width: 736px) {
+    .large-home-event .white-card {
+        height: 31.65vw;
+    }
+}
+.large-home-event .home-events-white-card-image {
+    height: 60vw;
+    width: 100%;
+    /*border: 1px dashed aqua;*/
+}
+.small-home-event .home-events-white-card-image {
+    height: 26vw;
+    width: 100%;
+}
+@media (min-width: 736px) {
+    .home-events-white-card-image {
+        height: 100%;
+    }
+
+}
+/* Whitespace to hold button and city text underneath card images */
+.large-home-event .card-section.text-center.city-text-2 {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: auto;
+    /*border: 1px dashed green;*/
+}
+
+.small-home-event .card-section.text-center.city-text-2 {
+    height: 26vw;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.city-text-2 {
+    padding: 20px 0;
+}
+@media (min-width: 736px) {
+    .large-home-event .card-section.text-center.city-text-2 {
+        height: 7.32vw;
+    }
+
+    .small-home-event .card-section.text-center.city-text-2 {
+        height: 12.81vw;
+    }
+
+    .small-home-event .home-events-white-card-image {
+        height: 12.81vw;
+        width: 100%;
+    }
+}
+    /* Button and text styling in that whitspace */
+.large-home-event .card-section.text-center.city-text-2 button, .small-home-event .card-section.text-center.city-text-2 button {
+    letter-spacing: .15em;
+    font-size: 3vw;
+    margin-right: 5%;
+    padding: .875em 1.295em;
+}
+
+.small-home-event .card-section.text-center.city-text-2 button {
+    margin-right: 0%;
+    flex-shrink: 0;
+}
+.large-home-event .card-section.text-center.city-text-2 h4{
+    letter-spacing: 2.42px;
+    font-size: 4.8vw;
+    text-transform: uppercase;
+    font-weight: 300;
+    /*border: 2px dashed hotpink;*/
+    margin-left: 5%;
+}
+.small-home-event .city-text {
+    font-size: 3.2vw;
+    letter-spacing: 2.42px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 10%;
+}
+
+@media (min-width: 736px) {
+    .large-home-event .card-section.text-center.city-text-2 button, .small-home-event .card-section.text-center.city-text-2 button {
+        font-size: 1.5rem;
+    }
+    .large-home-event .card-section.text-center.city-text-2 h4 {
+        font-size: 2.4rem;
+    }
+    .small-home-event .city-text {
+        font-size: 1.7vw;
+    }
+}
+/* Events Date Floater */
+.events-date-floater {
+    height: 25vw;
+    width: 20vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: #222;
+}
+
+.small-home-event .events-date-floater {
+    height: 19vw;
+    width: 15vw;
+}
+@media (min-width: 736px) {
+    .events-date-floater {
+        height: 130px;
+        width: 110px;
+    }
+    .small-home-event .events-date-floater {
+        height: 100px;
+        width: 85px;
+    }
+}
+    /* .box-date acts as a flexbox container for the date floater */
+.box-date {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+.month-color {
+    color: #4a4a4a;
+}
+.day-color {
+    color: #9b9b9b;
+}
+.date-number-color {
+    color: #ff6a6a;
+}
+.large-home-event .box-date span {
+    font-size: 15px;
+    letter-spacing: 2.42px;
+    font-weight: 300;
+}
+.small-home-event .box-date span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+.large-home-event .box-date strong {
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+.small-home-event .box-date strong {
+    font-size: 24px;
+    line-height: 1.36;
+    font-weight: 400;
+}
+@media (min-width: 736px) {
+    .large-home-event .box-date strong {
+        font-size: 40px;
+    }
+    .large-home-event .box-date span {
+        font-size: 20px;
+    }
+    .small-home-event .box-date strong {
+        font-size: 30px;
+    }
+    .small-home-event .box-date span {
+        font-size: 15px;
+    }
+
+}
+.box-date span, .box-date strong {
+    display: block;
+    line-height: 1;
+}
+/* Call to Action at bottom of Home Events section */
+.home-events > button {
+    display: block;
+    font-size: 2.125rem;
+    font-weight: 400;
+    padding: .9em 2em;
+    margin: 2rem auto;
+    border: 2px dashed hotpink;
+}
+/* A generic text centering class */
+.text-center {
+    text-align: center;
+}
