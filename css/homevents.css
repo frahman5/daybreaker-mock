@@ -4,12 +4,15 @@
     background-color: rgb(249,249,249);
 
     /* Add padding so background goes sufficiently above header image and bottom button */
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 25px;
+    padding-bottom: 3rem;
+
+    text-align: center; /* To center the main CTA button at the bottom */
 }
 /* Container for the home events section */
 .home-events-container {
-    margin: 30px auto;
+    margin: 25px auto;
+    margin-bottom: 0;
     width: 80vw;
 
     display: flex;
@@ -28,7 +31,7 @@
 .home-events > img {
     margin: 0 auto;
     display: block;
-    max-width: 70%;
+    max-width: 75%;
     /*border: 2px dashed red;*/
 }
 /* Faint, nearly invisible border on any event card */
@@ -48,7 +51,7 @@
 /* Small Home Event sizing and display properties */
 .small-home-event {
     width: 46%;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 @media (min-width: 736px) {
     .large-home-event {
@@ -261,12 +264,13 @@
 }
 /* Call to Action at bottom of Home Events section */
 .home-events > button {
-    display: block;
+    display: inline-block;
     font-size: 2.125rem;
-    font-weight: 400;
+    font-weight: 300;
     padding: .9em 2em;
     margin: 2rem auto;
-    border: 2px dashed hotpink;
+    max-width: 80%;
+    line-height: 1.3;
 }
 /* A generic text centering class */
 .text-center {

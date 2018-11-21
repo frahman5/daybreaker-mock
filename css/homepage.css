@@ -8,6 +8,7 @@ html {
 button {
     background-color: #9cffde;
     text-transform: uppercase;
+    letter-spacing: .15em;
 }
 button:hover {
     background-color: #000000;
