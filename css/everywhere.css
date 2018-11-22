@@ -1,5 +1,36 @@
-/********************* Header **************************/
+/* As the screen width increases, gradually increase root font size from 8px to 16px */
+html {
+    font-size: 8px;
+    font-family: sans-serif;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 9px;
+    }
+}
+@media (min-width: 1024px) {
+    html {
+        font-size: 9.5px;
+    }
+}
+@media (min-width: 1280px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media (min-width: 1440px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media (min-width: 1920px) {
+    html {
+        font-size: 16px;
+    }
+}
 
+
+/********************* Header **************************/
 header {
     /* Position, size, color */
     height: 10vh;
@@ -70,7 +101,7 @@ header {
         justify-content: space-between;
         align-items: center;
 
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     /* Put social nav icons to the left for spacing reasons */
     .header-nav-social-icon {
@@ -78,7 +109,7 @@ header {
     }
     .header-nav-social-icon > img {
         display: none; /* Don't display. Screen still too small */
-        height: 2.2rem;
+        height: 1.8rem;
     }
     #header-flex-right-container > button {
         height: 32px;
@@ -86,7 +117,7 @@ header {
         margin-right: 25px;
         margin-left: 40px;
 
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
 @media (min-width: 1180px) {
@@ -96,6 +127,21 @@ header {
     }
     .header-nav-social-icon > img {
         display: inline-block; /* Display them */
+    }
+}
+
+/* Decrease the size of nav links, icons, and button at large screen sizes */
+@media (min-width: 1440px) {
+    #header-flex-right-container > button {
+        font-size: 1.1rem;
+    }
+
+    .header-nav-social-icon > img {
+        height: 1.4rem;
+    }
+
+    #header-flex-right-container > nav > ul {
+        font-size: 1.1rem;
     }
 }
 #header-mobile-menu {

@@ -1,4 +1,3 @@
-
 /***************************** UPCOMING EVENTS *************************************/
 .home-events {
     background-color: rgb(249,249,249);
@@ -55,7 +54,7 @@
 }
 @media (min-width: 736px) {
     .large-home-event {
-        width: 47.5%;
+        width: 47%;
         display: inline-block;
         margin-bottom: 3rem;
         margin-left: 1rem;
