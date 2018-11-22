@@ -287,3 +287,65 @@ button.mm-card-button {
 
     text-align: center; /* to center the main CTA button */
 }
+
+/*********************** Real News ,*************************************/
+    /* Basic background color and setup */
+.idx-real-news {
+    background-color: rgb(249, 249, 249);
+    padding: 40px 0;
+}
+    /* Flex container for cards */
+.idx-rn-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+
+}
+    /* Basic styling for cards, layout and inner contents */
+.rn-row-1-card, .rn-row-2-card {
+    background: white;
+    width: 100%;
+    margin: 10px 0;
+    padding: 40px 10px;
+}
+.rn-card-image {
+    display: block;
+    margin: 0 auto;
+}
+.rn-card-bq {
+    display: block;
+    margin: 0 auto;
+
+    font-size: 5vw;
+    font-family: serif;
+    font-weight: 100;
+    font-style: italic;
+    color: #4e4e4e;
+}
+blockquote {
+    quotes: "“" "”" "‘" "’";
+}
+blockquote:before {
+    content:open-quote;
+}
+blockquote:after {
+    content:close-quote;
+}
+    /* At 736px, redo layout and some details of the inner contents */
+@media (min-width: 736px) {
+    .rn-card-bq {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    .rn-row-1-card { width: 30%; }
+    .rn-row-2-card { width: 47%; }
+    .rn-row-2-card, .rn-row-1-card {
+        height: 334px; /* So that all cards are same height even if text boxes vary in height */
+    }
+}

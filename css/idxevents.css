@@ -247,15 +247,6 @@
     line-height: 1;
 }
 /* Call to Action at bottom of Home Events section */
-.home-events > button {
-    display: inline-block;
-    font-size: 2.125rem;
-    font-weight: 300;
-    padding: .9em 2em;
-    margin: 2rem auto;
-    max-width: 80%;
-    line-height: 1.3;
-}
 /* A generic text centering class */
 .text-center {
     text-align: center;
