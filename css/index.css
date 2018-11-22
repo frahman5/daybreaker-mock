@@ -168,7 +168,6 @@ center the splash content */
     width: 90%;
     margin: 0 auto;
 }
-
 .mm-all-card {
     width: 47%;
     margin-top: 20px;
@@ -177,13 +176,13 @@ center the splash content */
     background-color: white;
 }
 
-.mm-all-card > img, .mm-mobile-top-card > img {
+.mm-all-card > img, .mm-horizontal-card > img {
     width: 17vh;
     height: 17vh;
     margin-bottom: 10px;
 }
 
-.mm-mobile-top-card {
+.mm-horizontal-card {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -197,7 +196,7 @@ center the splash content */
     display: none;
 }
 
-.mm-mobile-top-card-flex-right-container {
+.mm-horizontal-card-flex-right-container {
     padding: 20px 0;
     width: 50%;
 }
@@ -243,7 +242,7 @@ button.mm-card-button {
     font-weight: 400;
 }
 @media (min-width: 736px) {
-    .mm-mobile-top-cardg {
+    .mm-horizontal-card {
         display: none;
     }
 
