@@ -168,20 +168,7 @@ center the splash content */
     width: 90%;
     margin: 0 auto;
 }
-.mm-all-card {
-    width: 47%;
-    margin-top: 20px;
-    padding: 40px 0;
-    text-align: center;
-    background-color: white;
-}
-
-.mm-all-card > img, .mm-horizontal-card > img {
-    width: 17vh;
-    height: 17vh;
-    margin-bottom: 10px;
-}
-
+    /* Basic styling for the horizontal and vertical card containers */
 .mm-horizontal-card {
     display: flex;
     justify-content: space-evenly;
@@ -192,13 +179,22 @@ center the splash content */
     text-align: center;
     padding-bottom: 10px;
 }
-.mm-desktop-end-card {
-    display: none;
-}
-
 .mm-horizontal-card-flex-right-container {
     padding: 20px 0;
     width: 50%;
+}
+.mm-vert-card {
+    width: 47%;
+    margin-top: 20px;
+    padding: 40px 0;
+    text-align: center;
+    background-color: white;
+}
+    /* Basic styling for the h1, h2, button and img elements in horizontal and vertical cards */
+.mm-vert-card > img, .mm-horizontal-card > img {
+    width: 17vh;
+    height: 17vh;
+    margin-bottom: 10px;
 }
 h1.mm-card-title {
     color: black;
@@ -218,61 +214,64 @@ h2.mm-card-subtitle {
     font-weight: 100;
     padding: 0 3vw;
 }
-/* Use a series of MQs to set the min-height for detail text s.t
-    - each card remains equally sized at all screen widths
-    - the distance from the button to the detail text doesn't get too big.
- */
-.mm-all-card > h2.mm-card-subtitle {
-    min-height: 120px;
-}
-@media (min-width: 520px) {
-    .mm-all-card > h2.mm-card-subtitle {
-        min-height: 180px;
-    }
-}
-@media (min-width: 1000px) {
-    .mm-all-card > h2.mm-card-subtitle {
-        min-height: 100px;
-    }
-}
 button.mm-card-button {
     font-size: 1.7vh;
     padding: 1.5vh 3.5vw 1.5vh;
     letter-spacing: .2vw;
     font-weight: 400;
 }
+    /* At smaller screen sizes, don't show the 3rd vertical card */
+.idx-mm-container div:nth-child(4) {
+    display: none;
+}
+    /****** the details *******/
+    /* Use a series of MQs to set the min-height for detail text s.t
+    - each card remains equally sized at all screen widths
+    - the distance from the button to the detail text doesn't get too big.
+     */
+.mm-vert-card > h2.mm-card-subtitle {
+    min-height: 120px;
+}
+@media (min-width: 520px) {
+    .mm-vert-card > h2.mm-card-subtitle {
+        min-height: 180px;
+    }
+}
+@media (min-width: 1000px) {
+    .mm-vert-card > h2.mm-card-subtitle {
+        min-height: 100px;
+    }
+}
+    /* At 736px, switch up the layout and adjust styles as needed */
 @media (min-width: 736px) {
+    /* Swap the horizontal card for a third vertical card */
     .mm-horizontal-card {
         display: none;
     }
-
-    .mm-desktop-end-card {
+    .idx-mm-container div:nth-child(4) {
         display: block;
     }
-
-    .mm-all-card {
+    .mm-vert-card {
         width: 31%;
     }
 
+    /* Adjust the image, h1, h2, and button styles accordingly */
+    .mm-vert-card > img {
+        width: 100%;
+        height: auto;
+
+        padding: 44px;
+    }
     h1.mm-card-title {
         font-size: 2.2vw;
         margin-bottom: 3vh;
     }
-
     h2.mm-card-subtitle {
         font-size: 20px;
         letter-spacing: normal;
         text-align: center;
 
     }
-
-    .mm-all-card > img {
-        width: 100%;
-        height: auto;
-
-        padding: 44px;
-    }
-
     button.mm-card-button {
         font-size: 2.5vh;
         padding: 2.5vh 1.5vw 1.9vh;
