@@ -29,7 +29,45 @@ html {
     }
 }
 
+/* Root Button Styling Across website */
+button {
+    background-color: #9cffde;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+}
+button:hover {
+    background-color: #000000;
+    color: #9cffde;
+}
 
+/* Header root styles */
+h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 1.75px;
+    line-height: 3rem;
+    color: white;
+
+    margin-bottom: 3rem;
+
+}
+h2 {
+    font-size: 3vw;
+    font-weight: 200;
+    letter-spacing: .4rem;
+    line-height: 2.5rem;
+    color: #DCDCDC;
+
+    margin-bottom: 3rem;
+}
+h3 {
+    font-size: 2.5vw;
+    font-weight: 400;
+    letter-spacing: .3rem;
+    color: #D8D8D8;
+
+    margin-top: 3rem;
+}
 /********************* Header **************************/
 header {
     /* Position, size, color */
@@ -45,34 +83,34 @@ header {
 }
     /*** Header Logo ***/
     /* As the screen gets bigger, make the logo bigger */
-#header-logo {
+,header-logo {
     width: 42vw;
     margin-left: 15px;
 }
 @media (min-width: 600px) {
-    #header-logo {
+    .header-logo {
         width: 339px;
         height: 6vh;
     }
 }
     /* Hold Nav + Tix button in a container so we can lay
     them out together using flexbox */
-#header-flex-right-container {
+.header-right-container {
     /* Size it right for small screens */
     width: 180px;
     height: 10vh;
 
-    /* Align the nav and Tix button appropiately */
+    /* Align the nav and Tix button appropriately */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
     /* At small screen sizes, we go hamburger menu, not full nav */
-#header-flex-right-container > nav {
+.header-right-container > nav {
     display: none;
 }
-#header-flex-right-container > button {
+.header-right-container > button {
     /* Look&Feel, size */
     letter-spacing: .15em;
     width: 90px;
@@ -86,12 +124,12 @@ header {
     /* At 2014 pixels, swap out the hamburger icon for a full fledged nav */
 @media (min-width: 1024px) {
     #header-mobile-menu { display: none; }
-    #header-flex-right-container { width: 800px; /* Trial and Error */ }
-    #header-flex-right-container > nav {
+    .header-right-container { width: 800px; /* Trial and Error */ }
+    .header-right-container > nav {
         display: inline-block;
         width: 90%;
     }
-    #header-flex-right-container > nav > ul {
+    .header-right-container > nav > ul {
         /* Take up the entire nav container */
         width: 100%;
 
@@ -111,7 +149,7 @@ header {
         display: none; /* Don't display. Screen still too small */
         height: 1.8rem;
     }
-    #header-flex-right-container > button {
+    .header-right-container > button {
         height: 32px;
         width: 105px;
         margin-right: 25px;
@@ -129,18 +167,15 @@ header {
         display: inline-block; /* Display them */
     }
 }
-
 /* Decrease the size of nav links, icons, and button at large screen sizes */
 @media (min-width: 1440px) {
-    #header-flex-right-container > button {
+    .header-right-container > button {
         font-size: 1.1rem;
     }
-
     .header-nav-social-icon > img {
         height: 1.4rem;
     }
-
-    #header-flex-right-container > nav > ul {
+    .header-right-container > nav > ul {
         font-size: 1.1rem;
     }
 }
@@ -151,18 +186,3 @@ header {
     border-left: 1px solid #e3e3e3;
 }
 
-/* Basic Button action everywhere */
-button {
-    background-color: #9cffde;
-    text-transform: uppercase;
-    letter-spacing: .15em;
-}
-button:hover {
-    background-color: #000000;
-    color: #9cffde;
-}
-
-/* Make a container relatively positions */
-.p-rel {
-    position: relative;
-}

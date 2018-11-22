@@ -1,0 +1,32 @@
+/* Make a container relatively positioned */
+.p-rel {
+    position: relative;
+}
+
+/* Overlap a black tinge on a relatively positioned parent element*/
+.blk-overlay {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Basic Column flexbox */
+.col-center-center-flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+/* Basic Row flexbox */
+.row-center-center-flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+/* Card shadow */
+.card-shadow {
+    box-shadow: 0 3px 26px -4px rgba(0,0,0,.13);
+}

@@ -1,4 +1,11 @@
-/********************************** HERO *************************************/
+/**************************** ALL INDEX ****************************************/
+.title-image {
+    margin: 0 auto;
+    display: block;
+    max-width: 75%;
+}
+
+/******************************  HERO ******************************************/
 .idx-hero {
     /* Bckground */
     background-image: url("../assets/img/dybrkr_home_background_image.jpg");
@@ -10,7 +17,6 @@
     width: 100vw;
     height: 60vh;
 }
-
     /*********** HANDLING THE VIDEO ***********/
 /* At the smallest screen sizes, we use a background image, no video. At 760px, we
 switch to the vdeio. At 1280px, we fix the height of the video so that it doesn't
@@ -42,7 +48,6 @@ grow outside of its container in an attempt to preserve its aspect ratio. */
         height: 90vh;
     }
 }
-
     /********** MAIN HERO *********************/
 /* The purpose of the <main> container is to hold the necessary space to properly
 center the splash content */
@@ -55,12 +60,6 @@ center the splash content */
     display: flex;
     align-items: center;
     justify-content: center;
-}
-/* Overlap a black color */
-.blk-overlay {
-    position: absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 /* Center items horizontally within the splash area */
 .splash-container {
@@ -77,33 +76,6 @@ center the splash content */
     width: 18vw;
     margin-bottom:4rem;
 }
-h1 {
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing: 1.75px;
-    line-height: 3rem;
-    color: white;
-
-    margin-bottom: 3rem;
-
-}
-h2 {
-    font-size: 3vw;
-    font-weight: 200;
-    letter-spacing: .4rem;
-    line-height: 2.5rem;
-    color: #DCDCDC;
-
-    margin-bottom: 3rem;
-}
-h3 {
-    font-size: 2.5vw;
-    font-weight: 400;
-    letter-spacing: .3rem;
-    color: #D8D8D8;
-
-    margin-top: 3rem;
-}
 #splashdetail1break {
     display: inline; /* At smaller screen sizes, there should be a line break */
 }
@@ -119,7 +91,6 @@ h3 {
 @media (min-width: 700px) {
     .splash-container > img {
         width: 6vw;
-
         margin-bottom: 3rem;
     }
     h1 {
@@ -150,7 +121,7 @@ h3 {
     }
 }
 
-/********************** LETS BE FRIENDS ******************/
+/*********************** LET'S BE FRIENDS *************************************/
 .lets-be-friends {
     display: flex;
     justify-content: center;
@@ -175,5 +146,136 @@ h3 {
 
     .lets-be-friends img {
         height: 11vw;
+    }
+}
+
+/*********************** MORE MISCHIEF *************************************/
+    /* Basic sizing of section relative to other sections. Background */
+.idx-more-mischief {
+    background-image: url("../assets/img/mm-section-bg.jpg");
+
+    /* Put some space between this section and the ones below and above it */
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+    /* Flexbox Container for cards */
+.idx-mm-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mm-all-card {
+    width: 47%;
+    margin-top: 20px;
+    padding: 40px 0;
+    text-align: center;
+}
+.mm-card {
+    background-color: white;
+    text-align: center;
+}
+.mm-mobile-top-card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+
+    padding-bottom: 10px;
+}
+.mm-desktop-end-card {
+    display: none;
+}
+.mm-card > img {
+    width: 17vh;
+    height: 17vh;
+}
+.mm-all-card > img {
+    margin-bottom: 10px;
+}
+.mm-mobile-top-card-flex-right-container {
+    padding: 20px 0;
+    width: 50%;
+}
+h1.mm-card-title {
+    color: black;
+    font-size: 5.4vw;
+    letter-spacing: .3vw;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+h2.mm-card-subtitle {
+    color: black;
+    font-size: 4vw;
+    letter-spacing: .1vw;
+    line-height: 1.5;
+    font-family: serif;
+    font-weight: 100;
+    padding: 0 3vw;
+}
+/* Use a series of MQs to set the min-height for detail text s.t
+    - each card remains equally sized at all screen widths
+    - the distance from the button to the detail text doesn't get too big.
+ */
+.mm-all-card > h2.mm-card-subtitle {
+    min-height: 120px;
+}
+@media (min-width: 520px) {
+    .mm-all-card > h2.mm-card-subtitle {
+        min-height: 180px;
+    }
+}
+@media (min-width: 1000px) {
+    .mm-all-card > h2.mm-card-subtitle {
+        min-height: 100px;
+    }
+}
+button.mm-card-button {
+    font-size: 1.7vh;
+    padding: 1.5vh 3.5vw 1.5vh;
+    letter-spacing: .2vw;
+    font-weight: 400;
+}
+@media (min-width: 736px) {
+    .mm-mobile-top-card.mm-card {
+        display: none;
+    }
+
+    .mm-desktop-end-card {
+        display: block;
+    }
+
+    .mm-all-card {
+        width: 31%;
+    }
+
+    h1.mm-card-title {
+        font-size: 2.2vw;
+        margin-bottom: 3vh;
+    }
+
+    h2.mm-card-subtitle {
+        font-size: 20px;
+        letter-spacing: normal;
+        text-align: center;
+
+    }
+
+    .mm-all-card > img {
+        width: 100%;
+        height: auto;
+
+        padding: 44px;
+    }
+
+    button.mm-card-button {
+        font-size: 2.5vh;
+        padding: 2.5vh 1.5vw 1.9vh;
     }
 }
