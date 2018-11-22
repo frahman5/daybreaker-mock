@@ -8,9 +8,6 @@ html {
 
 /********************************** HERO *************************************/
 .idx-hero {
-    /* Apply position so that the <main> element can position itself against this */
-    /*position: relative;*/
-
     /* Bckground */
     background-image: url("../assets/img/dybrkr_home_background_image.jpg");
     background-size: cover;

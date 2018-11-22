@@ -72,8 +72,8 @@
 .white-card {
     background-color: #fff;
     overflow: hidden; /* Why */
-    position: relative;
 }
+
 .large-home-event .white-card {
     width: 100%;
     height: 60vw;
