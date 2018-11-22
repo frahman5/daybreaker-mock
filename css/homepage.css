@@ -4,21 +4,12 @@ html {
     font-family: sans-serif;
 }
 
-/* Basic Button action everywhere */
-button {
-    background-color: #9cffde;
-    text-transform: uppercase;
-    letter-spacing: .15em;
-}
-button:hover {
-    background-color: #000000;
-    color: #9cffde;
-}
+
 
 /********************************** HERO *************************************/
 .idx-hero {
     /* Apply position so that the <main> element can position itself against this */
-    position: relative;
+    /*position: relative;*/
 
     /* Bckground */
     background-image: url("../assets/img/dybrkr_home_background_image.jpg");
@@ -167,5 +158,36 @@ h3 {
     }
     #form-standin-homepage {
         padding: 20px 300px;
+    }
+}
+
+
+/********************** LETS BE FRIENDS ******************/
+.lets-be-friends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    padding: 1vw;
+
+}
+
+.lets-be-friends img {
+    height: 18vw;
+}
+
+.mobile-off {
+    display: none;
+}
+@media (min-width: 736px) {
+    .mobile-off {
+        display: inline-block;
+    }
+    .mobile-on {
+        display: none;
+    }
+
+    .lets-be-friends img {
+        height: 11vw;
     }
 }

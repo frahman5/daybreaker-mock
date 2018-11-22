@@ -105,72 +105,18 @@ header {
     border-left: 1px solid #e3e3e3;
 }
 
+/* Basic Button action everywhere */
+button {
+    background-color: #9cffde;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+}
+button:hover {
+    background-color: #000000;
+    color: #9cffde;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*header > nav > ul {*/
-/*display: flex;*/
-/*flex-flow: row nowrap;*/
-/*align-items: center;*/
-/*justify-content: flex-end;*/
-/*padding-right: 30px;*/
-/*flex-shrink: 2;*/
-/*}*/
-/*header > nav > ul > li {*/
-/*margin: 0px 10px;*/
-/*font-size: 1.1rem;*/
-/*letter-spacing: .125rem;*/
-/*}*/
-/*div.header-btn-container {*/
-/*width: 10%;*/
-/*flex-shrink: 1;*/
-/*}*/
-
-/*header > div.header-btn-container > button {*/
-/*width: border-box;*/
-/*padding: 10px 20px;*/
-/*}*/
-/*header > nav {*/
-/*width: 70%*/
-/*}*/
-/*header > img {*/
-/*width: 20%;*/
-/*}*/
-/* Social links in nav */
-/*nav > ul > li > img {*/
-/*height: 1.5rem;*/
-/*}*/
+/* Make a container relatively positions */
+.p-rel {
+    position: relative;
+}
