@@ -349,3 +349,23 @@ blockquote:after {
         height: 334px; /* So that all cards are same height even if text boxes vary in height */
     }
 }
+
+/*********************** Join Us *************************************/
+.idx-join-us {
+    text-align: center;
+    padding: 20px 0;
+}
+.idx-join-us > p {
+    text-transform: uppercase;
+    padding: 0 10px;
+    margin-top: 15px;
+}
+.idx-join-us > div#form-standin-homepage {
+    background-color: beige;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.idx-join-us > p > span {
+    color: #50e3c2;
+}
+
