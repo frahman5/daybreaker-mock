@@ -58,10 +58,6 @@
         width: 22.5%;
     }
 }
-/* Card Styles */
-.card {
-    box-shadow: 0 3px 26px -4px rgba(0,0,0,.13);
-}
 .white-card {
     background-color: #fff;
     overflow: hidden; /* Why */

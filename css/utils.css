@@ -30,3 +30,14 @@
 .card-shadow {
     box-shadow: 0 3px 26px -4px rgba(0,0,0,.13);
 }
+
+/* Large button */
+.large-button {
+    display: inline-block;
+    font-size: 2.125rem;
+    font-weight: 300;
+    padding: .9em 2em;
+    margin: 2rem auto;
+    max-width: 80%;
+    line-height: 1.3;
+}

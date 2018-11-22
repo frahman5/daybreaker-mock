@@ -167,6 +167,7 @@ center the splash content */
 
     width: 90%;
     margin: 0 auto;
+    margin-top: 20px;
 }
     /* Basic styling for the horizontal and vertical card containers */
 .mm-horizontal-card {
@@ -276,4 +277,13 @@ button.mm-card-button {
         font-size: 2.5vh;
         padding: 2.5vh 1.5vw 1.9vh;
     }
+}
+
+/*********************** Bring us to your city *************************************/
+.idx-bring-us-to-your-city {
+    background-image: url("../assets/img/Producer-section-background-img.jpg");
+    background-size: cover;
+    padding: 3vw 0;
+
+    text-align: center; /* to center the main CTA button */
 }
