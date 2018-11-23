@@ -87,6 +87,70 @@ center the splash content */
     background-color: white;
     max-width: 90%;
 }
+    /* Handling the Form */
+.idx-hero-form {
+    height: 50px;
+    width: 98%;
+
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+
+    position: relative;
+}
+/*.idx-form-select {*/
+    /*width: 25%;*/
+    /*border-radius: 0;*/
+/*}*/
+/*.idx-form-select-skin {*/
+    /*border: 1px dashed red;*/
+    /*height: 50px;*/
+    /*width: 25%;*/
+
+    /*background-color: #eee;*/
+    /*position: absolute;*/
+
+    /*left: 0;*/
+    /*z-index: -1;*/
+/*}*/
+.idx-form-email {
+    width: 75%;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+
+    /*color: #D8D8D8;*/
+    font-size: 1.8rem;
+
+    padding-left: 10px;
+}
+
+.idx-form-email:focus, .idx-form-btn:focus {
+    outline: none
+}
+
+.idx-form-email::placeholder {
+    color: #D8D8D8;
+    font-size: 1.8rem;
+}
+.idx-form-btn {
+    background-color: #50e3c2;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    width: 25%;
+    color: white;
+
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.idx-form-btn:hover {
+    background-color: #000000;
+}
+
+
     /*** HERO AT MIDDLE TO LARGE SCREEN SIZES **/
 @media (min-width: 700px) {
     .splash-container > img {
