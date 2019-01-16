@@ -1,0 +1,45 @@
+# What does the home-slider-bg class do?
+- Sets a repeating background image. This is the wavy background.
+- Sets position: relative
+- Puts some padding on the top and bottom.
+
+# What does the "row" class do?
+TK
+
+# What does the home-slider-sider id do?
+- Enables some jQuery. In Jquery, the "lazy" class is added to this element.
+- There is a Lazy() function that is called on all elements with the "lazy" class.
+- There's also some padding and margin work done based on that ID.
+
+# What does the experience-slider class do??
+-It's used to select the element upon which the slick() function is called.
+
+# What does the slick-initalized class do?
+- The Slick library adds this class to the basic slick class upon initalization.
+- IN CSS, all it has is "display: block"
+
+# What do the following classes do?
+- "slide"
+- "slider-img"
+- "slider-content"
+- "slider-number"
+- "slider-content-right"
+- "slider-title"
+- "slider-subtext"
+- "slider-bullets"
+- "bullet-num_1"/"bullet-num_2"/"bullet-num_3"/"bullet-num_4"/"bullet-num_5"/"bullet-num_6"/"bullet-num_7"
+
+It first starts with "Home Section 1 Text" The following IDs and Classes are only for that:
+- ID: home-slider-text
+- (composite) Class: "row expanded columns content-wrapper"
+- ID: home-section-1-text
+- (composite) class: "small-10 medium-10 small-centered columns text-center"
+
+## GENERAL POINTS
+### BASIC STRUCTURE
+- div.home-slider-bg.row
+    div (for home section text)
+    div for slider
+  /div
+### SLIDER POINTS
+- Daybreaker used some AJAX in their implementation.

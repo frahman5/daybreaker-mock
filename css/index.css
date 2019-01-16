@@ -87,70 +87,6 @@ center the splash content */
     background-color: white;
     max-width: 90%;
 }
-    /* Handling the Form */
-.idx-hero-form {
-    height: 50px;
-    width: 98%;
-
-    display: flex;
-    justify-content: center;
-    flex-flow: row nowrap;
-
-    position: relative;
-}
-/*.idx-form-select {*/
-    /*width: 25%;*/
-    /*border-radius: 0;*/
-/*}*/
-/*.idx-form-select-skin {*/
-    /*border: 1px dashed red;*/
-    /*height: 50px;*/
-    /*width: 25%;*/
-
-    /*background-color: #eee;*/
-    /*position: absolute;*/
-
-    /*left: 0;*/
-    /*z-index: -1;*/
-/*}*/
-.idx-form-email {
-    width: 75%;
-    border-bottom-left-radius: 2px;
-    border-top-left-radius: 2px;
-
-    /*color: #D8D8D8;*/
-    font-size: 1.8rem;
-
-    padding-left: 10px;
-}
-
-.idx-form-email:focus, .idx-form-btn:focus {
-    outline: none
-}
-
-.idx-form-email::placeholder {
-    color: #D8D8D8;
-    font-size: 1.8rem;
-}
-.idx-form-btn {
-    background-color: #50e3c2;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-weight: 700;
-    font-size: 1.6rem;
-
-    width: 25%;
-    color: white;
-
-    border-bottom-right-radius: 2px;
-    border-top-right-radius: 2px;
-}
-
-.idx-form-btn:hover {
-    background-color: #000000;
-}
-
-
     /*** HERO AT MIDDLE TO LARGE SCREEN SIZES **/
 @media (min-width: 700px) {
     .splash-container > img {
@@ -183,6 +119,50 @@ center the splash content */
     #form-standin-homepage {
         padding: 20px 300px;
     }
+}
+
+/***************************** NEWSLETTER FORMS *****************************/
+.idx-newsletter-form {
+    height: 50px;
+    width: 98%;
+
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+}
+.idx-newsletter-form-email {
+    width: 70%;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+
+    font-size: 1.8rem;
+    padding-left: 10px;
+}
+.idx-preftr-newsletter-form-email {
+    background-color: #F7F7F7;
+    color: #9B9B9B;
+}
+.idx-newsletter-form-email:focus, .idx-newsletter-form-btn:focus {
+    outline: none
+}
+.idx-hero-newsletter-form-email::placeholder {
+    color: #D8D8D8;
+}
+.idx-newsletter-form-btn {
+    background-color: #50e3c2;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    width: 30%;
+    color: white;
+
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.idx-newsletter-form-btn:hover {
+    background-color: #000000;
 }
 
 /*********************** LET'S BE FRIENDS *************************************/
@@ -419,17 +399,360 @@ blockquote:after {
     text-align: center;
     padding: 20px 0;
 }
-.idx-join-us > p {
+.pre-ftr-container > p {
     text-transform: uppercase;
     padding: 0 10px;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
-.idx-join-us > div#form-standin-homepage {
+.pre-ftr-container > div#form-standin-homepage {
     background-color: beige;
     margin: 0 auto;
     margin-top: 15px;
 }
-.idx-join-us > p > span {
+.pre-ftr-container > p > span {
     color: #50e3c2;
 }
+.pre-ftr-container {
+    margin: 0 auto;
+    max-width: 80%;
 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 736px) {
+    .pre-ftr-container {
+        max-width: 60%;
+    }
+}
+
+/********************** CAROUSEL **********************************/
+/*      BASIC SETUP */
+.slider-section {
+    background-image: url("../assets/img/06-Homepage-Zigzag-background.png");
+    height: 180vh;
+    padding-top: 40px;
+}
+.slider-img {
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: flex-end;*/
+    text-align: center;
+    padding-bottom: 5%;
+    border-width: 0px;
+    position: relative;
+}
+/* Slider detail box that floats on top of each image */
+.slider-detail {
+    position: absolute;
+    height: 20%;
+    bottom: 10%;
+    width: 90%;
+    left: 5%;
+    right: 5%:
+    margin: 0 auto;
+
+    background: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+#slide1 {background-image: url("../assets/img/Daybreaker_Experience-Slider_01.png");}
+#slide2 {background-image: url("../assets/img/Daybreaker_Experience-Slider_02.png");}
+#slide3 {background-image: url("../assets/img/Daybreaker_Experience-Slider_03.png");}
+#slide4 {background-image: url("../assets/img/Daybreaker_Experience-Slider_04.jpg");}
+#slide5 {background-image: url("../assets/img/Daybreaker_Experience-Slider_05.png");}
+#slide6 {background-image: url("../assets/img/Daybreaker_Experience-Slider_06.png");}
+#slide7 {background-image: url("../assets/img/Daybreaker_Experience-Slider_07.jpg");}
+.slick-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -1.875rem;
+    font-size: 3.75rem;
+    color: #9fffde;
+    font-weight: 700;
+    z-index: 99;
+}
+.slick-arrow.prev {
+    position: absolute;
+    top: 92.5%!important;
+    left: 12%!important;
+}
+.slick-arrow.next {
+    position: absolute;
+    top: 92.5%!important;
+    right: 12%!important;
+}
+.next {
+    background: url("https://www.daybreaker.com/wp-content/themes/dybrkr/images/08-Homepage-Slide Show-Arrow.png") no-repeat;
+    width: 37px;
+    height: 69px;
+}
+.next:hover {
+    background: url("https://www.daybreaker.com/wp-content/themes/dybrkr/images/desktop-forward.png") no-repeat;
+}
+.prev {
+    background: url("https://www.daybreaker.com/wp-content/themes/dybrkr/images/08-Homepage-Slide-Show-Arrow-back.png") no-repeat;
+    width: 37px;
+    height: 69px;
+}
+.prev:hover {
+    background: url("https://www.daybreaker.com/wp-content/themes/dybrkr/images/desktop-back.png") no-repeat;
+}
+
+/* White backgrounded box on index page that floats above the slideing carouse */
+.experience-text {
+    background-color: white;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+
+    /* Add padding to left/right sides to keep the text from straying towards the edges */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.experience-text * {
+    /*border: 1px solid red;*/
+}
+
+div.experience-text h2 {
+    color: black;
+    font-weight: 100;
+    font-size: 2.5vw;
+    line-height: 1.5;
+    letter-spacing: 0.2rem;
+    margin: 20px 10px;
+}
+
+.experience-text-list {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px auto;
+}
+
+.experience-text-list-item img {
+    width: 60px;
+    height: 60px;
+}
+.experience-text-list-item p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.25rem;
+    text-align: left;
+    margin-left: 10px;
+}
+.experience-text-list-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+@media (min-width: 970px) {
+    div.experience-test h2 {
+        font-size: 5vw;
+    }
+}
+@media (max-width: 361px) {
+    .experience-text-list {
+        width: 95%;
+    }
+}
+@media (max-width: 767px) {
+    .experience-text-list {
+        width: 266px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    .experience-text {
+        width: 71%;
+    }
+    .experience-text-list {
+        flex-flow: row wrap;
+    }
+    .experience-text-list-item {
+        height: 135px;
+        width: 50%;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    .experience-text-list-item img {
+        width: 85px;
+        height: 85px;
+        margin-bottom: 5px;
+    }
+    .experience-text-list-item p {
+        margin: 5px 50%;
+        text-align: center;
+    }
+}
+@media (min-width: 1201px) {
+    .experience-text {
+        width: 71%;
+    }
+    .experience-text-list {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
+    .experience-text-list-item {
+        flex-flow: column nowrap;
+        border: 1px solid orange;
+        width: 266px;
+    }
+    .experience-text-list-item img {
+        width: 85px;
+        height: 85px;
+        margin-bottom: 5px;
+    }
+    .experience-text-list-item p {
+        text-align: center;
+        margin-top: 5px;
+    }
+}
+
+.slick-dots {
+    position: relative;
+    bottom: 0!important;
+    max-width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    height: 20vh;
+    padding-left: -10px;
+    margin: 5rem auto;
+}
+ul.slick-dots {
+    list-style: none;
+    max-width: 69%;
+    padding-left: 0px;
+}
+/* Use a ::before pseudo-element to achieve the grey line connecting the dots.
+We position it such that it's top border cuts precisely through the dots */
+ul.slick-dots::before {
+    content: "";
+    border-top: 1px solid #DBDBDB;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 10px;
+}
+.slick-dots li {
+
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 20px;
+    top:-10px;
+}
+.slick-dots li button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #CFCFCF;
+}
+
+/* When a particular slide is active, make the corresponding tracker dot turn green */
+.slick-slider .slick-dots li.slick-active button {
+    background: #50E3C2;
+}
+/* At smaller widths, hide the captions to the dots.*/
+.slick-slider .slick-dots li p {
+    display: none;
+}
+/* Make the secondary dot dissapear */
+.slick-dots li button:before {
+    font-size: 0px;
+}
+
+
+.slider-detail *{
+    border: 1px solid red;
+}
+.slider-number {
+    width: 4rem;
+    height: 4rem;
+    border: 5px solid red;
+    border-radius: 50%;
+    margin-left: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #AEAEAE;
+    font-size: 2.5rem;
+    font-family: Arial;
+}
+
+.slider-title {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+}
+
+.slider-subtext {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #B1B1B1;
+    font-family: sans-serif;
+    letter-spacing: 0.04rem;
+    font-weight: 100;
+}
+
+@media (min-width: 1024px) {
+    .slider-img {
+        max-width: 69%;
+        margin: 0 auto;
+        border-style: solid;
+        border-width: 12.5px;
+        border-color: #fff;
+    }
+    .slick-arrow.prev {
+        position: absolute;
+        top: 45%;
+        left: 10%;
+    }
+
+    .slick-arrow.next {
+        position: absolute;
+        top: 45%!important;
+        right: 10%!important;
+    }
+
+    .slider-detail {
+        /* Resize it */
+        width: 50%;
+        height: 30%;
+        /* Use positioning to center it horizontally */
+        left: 25%;
+        right: 25%;
+    }
+
+    /* At larger widths, display the captions to the dots. These are hidden at smaller widths*/
+    .slick-slider .slick-dots li p {
+        display: inline;
+    }
+}

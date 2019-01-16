@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/index.css">
+
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.experience-slider').slick({
+                // autoplay: true,
+                autoplay: false,
+                arrows: true,
+                prevArrow: '<span class="prev"></span>',
+                nextArrow: '<span class="next"></span>',
+                dots: true
+        });
+            $('ul.slick-dots li:nth-child(1)').append("<p>Wake&nbsp;Up</p>");
+            $('ul.slick-dots li:nth-child(2)').append("<p>Yoga/Fitness</p>");
+            $('ul.slick-dots li:nth-child(3)').append("<p>Dance</p>");
+            $('ul.slick-dots li:nth-child(4)').append("<p>Bazaar</p>");
+            $('ul.slick-dots li:nth-child(5)').append("<p>Performance</p>");
+            $('ul.slick-dots li:nth-child(6)').append("<p>Intention</p>");
+            $('ul.slick-dots li:nth-child(7)').append("<p>Say&nbsp;Yes</p>");
+            console.log(slickdotshtml);
+        });
+    </script>
+</head>
+<body>
+<div class="slider-section">
+    <div class="experience-text">
+        <h2>DAYBREAKER IS A MORNING DANCE PARTY THAT
+            WILL START YOUR DAY WITH ENERGY & INTENTION.</h2>
+    </div>
+    <div class="experience-slider">
+        <div class="slide">
+            <div class="slider-img" id="slide1">
+                <div class="slider-detail">
+                    <div class="slider-number">1</div>
+                    <div class="slider-content-right">
+                        <div class="slider-title">Wake up Early</div>
+                        <div class="slider-subtext">Instead of hitting the gym, we hit the dance floor</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slider-img" id="slide2">
+                <div class="slider-detail">
+                    <div class="slider-number">2</div>
+                    <div class="slider-content-right">
+                        <div class="slider-title">Yoga Pregame</div>
+                        <div class="slider-subtext">1-HR Deep House Yoga or a heart-pumping workout</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slider-img" id="slide3">
+                <div class="slider-detail">
+                    <div class="slider-number">3</div>
+                    <div class="slider-content-right">
+                        <div class="slider-title">Epic Dance Party</div>
+                        <div class="slider-subtext">Main Event = 2-HR Dance party with epic surprises</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slider-img" id="slide4">
+                <div class="slider-detail">
+                    <div class="slider-number">4</div>
+                    <div class="slider-content-right">
+                        <div class="slider-title">Free bevs & Bites</div>
+                        <div class="slider-subtext">Coffee, healthy juices, & breakfast treats--no booze :)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slider-img" id="slide5">
+                <div class="slider-detail">
+                    <div class="slider-number">5</div>
+                    <div class="slider-content-right">
+                        <div class="slider-title">Secret Concert</div>
+                        <div class="slider-subtext">Soul moving performance by local artists</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slider-img" id="slide6">
+                <div class="slider-detail">
+                    <div class="slider-number">6</div>
+                    <div class="slider-content-right">
+                        <div class="slider-title">Set Intentions</div>
+                        <div class="slider-subtext">Together, we share an intention and leave connected</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slider-img" id="slide7">
+                <div class="slider-detail">
+                    <div class="slider-number">7</div>
+                    <div class="slider-content-right">
+                        <div class="slider-title">Keep saying yes</div>
+                        <div class="slider-subtext">See what happens when you keep showing up</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="slick/slick.js"></script>
+</body>
+</html>

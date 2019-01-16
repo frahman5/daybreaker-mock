@@ -1,0 +1,55 @@
+**UPCOMING EVENTS SECTION**
+ORDER OF OPERATIONS:
+- Get the Large Home Events looking perfect up to 736px
+- Get the Small Home Events looking perfect up to 736px
+- Work on the layout above 736px
+
+
+BREAKPOINTS
+- Basically one major breakpoint at 736px. Up to 736, its vertical layout looking like:
+	- Row 1: 1 Large Home Event
+	- Row 2: 1 Large Home Event
+	- Row 3: 2 Small Home Events
+	- Row 4: 2 Small Home Events
+	Beyond that, the layout is:
+	- Row 1: 2 Large Home Events
+	- Row 2: 4 Small Home Events
+
+CLASS STYLES
+.button {
+		border: 0 solid #9fffde
+		background-color: #9fffde
+		color: black;
+		font-weight: 400;
+		display: inline-block;
+		cursor: pointer;
+		border-radius: 0;
+		margin: 0 0 1rem;
+		text-align: center;
+		vertical-align: middle;
+		letter-spacing: .15em;
+}
+
+*Large Box*
+class: large-home event
+- margin-right: 0
+- border: 5px solid rgba(255,255,255.2)
+- width: 97%
+- margin-bottom: 5%
+- display: inline-block
+
+class: card
+	border: 0
+	box-shadow: 0 3px 26px -4px rgba(0,0,0,.13)
+	
+large-home-event .white-card
+	width: 100%
+	text-align: center
+	overflow: hidden
+	position: relative
+	
+.white-card
+	color: white;
+	
+.card-grower
+	cursor: pointer
