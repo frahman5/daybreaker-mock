@@ -437,19 +437,23 @@ blockquote:after {
     max-width: 90%;
 
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 30px auto; /* No margin up top, but need some space down under */
 
-    padding: 20px 10px;
+    padding: 10px 5px 0px 5px;
     text-align: center;
-    margin-bottom: 20px;
 }
 .experience-text h2 {
     color: black;
     font-weight: 100;
-    font-size: 2.5vw;
+    font-size: 2.2rem;
     line-height: 1.5;
     letter-spacing: 0.2rem;
     margin: 20px 10px;
+}
+@media (min-width: 970px) {
+    .experience-text h2 {
+        font-size: 3.5rem;
+    }
 }
 .experience-text-list {
     display: flex;
@@ -472,8 +476,9 @@ blockquote:after {
     height: 60px;
 }
 .experience-text-list-item p {
-    font-size: 1.5rem;
-    line-height: 1.8rem;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 2rem;
     letter-spacing: 0.25rem;
     text-align: left;
     margin-left: 10px;
@@ -508,13 +513,14 @@ blockquote:after {
         margin-bottom: 5px;
     }
     .experience-text-list-item p {
-        margin: 5px 50%;
+        /*margin: 5px 10%;*/
         text-align: center;
     }
 }
 @media (min-width: 1201px) {
     .experience-text {
         width: 71%;
+        padding-bottom: 3px;
     }
     .experience-text-list {
         flex-flow: row nowrap;
@@ -542,8 +548,9 @@ blockquote:after {
 /*      BASIC CAROUSEL SETUP: section, image, detail box */
 .slider-section {
     background-image: url("../assets/img/06-Homepage-Zigzag-background.png");
-    height: 180vh;
+    height: fit-content;
     padding-top: 40px;
+    padding-bottom: 80px; /* need extra padding on bottom to accomodate the absolutely positioned dots */
 }
 .slider-img {
     /* Sizing, background configuration */
@@ -559,50 +566,39 @@ blockquote:after {
     /* Slider detail box that floats on top of each image */
 
     /* Basic appearance and size */
-    background: white;
-    height: 20%;
-    width: 90%;
+    background: white; height: 22%; width: 94%;
 
     /* Positioning */
-    position: absolute;
-    bottom: 10%; left: 5%; right: 5%;
+    position: absolute; bottom: 10%; left: 3%; right: 3%;
 
     /* Align internal using flexbox */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+    display: flex; flex-direction: row; align-items: center; justify-content: flex-start;
 }
 .slider-number {
-    width: 4rem;
-    height: 4rem;
-    border: 5px solid red;
-    border-radius: 50%;
-    margin-left: 5%;
+    border: 4px solid red; border-radius: 50%;
+    margin-left: 3%; margin-right: 3%;
+    width: 70px; height: 70px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* Center the number within its box */
+    display: flex; justify-content: center; align-items: center;
 
-    color: #AEAEAE;
-    font-size: 2.5rem;
-    font-family: Arial;
+    color: #AEAEAE; font-size: 5rem;
+}
+.slider-content-right {
+    height: 80%;
+    padding-right: 5px;
+    max-width: 70%; /* To keep it from smushing the number at small widths */
+    text-transform: uppercase;
+
+    /* Vertically center text within the container */
+    display: flex; flex-flow: column nowrap; justify-content: center;
 }
 .slider-title {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .125rem;
-    font-weight: 100;
-    margin-bottom: 0.5rem;
+    font-size: 2.8rem; letter-spacing: .125rem; font-weight: 100;
+    margin-bottom: 1rem;
 }
 .slider-subtext {
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #B1B1B1;
-    font-family: sans-serif;
-    letter-spacing: 0.04rem;
-    font-weight: 100;
+    font-size: 1.5rem; color: #B1B1B1; letter-spacing: 0.2rem; line-height: 2.2rem; font-weight: 300;
 }
         /*      Background images for each slide                 */
 #slide1 {background-image: url("../assets/img/Daybreaker_Experience-Slider_01.png");}
@@ -634,18 +630,15 @@ ul.slick-dots::before {
     content: "";
     border-top: 1px solid #DBDBDB;
     position: absolute;
-    top: 0; left: 10px; right: 10px;
+    top: -3px; left: 10px; right: 10px;
 }
 ul.slick-dots li {
     text-transform: uppercase;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* Use flexbox to control the layout of the dots vs. the text */
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
 
-    height: 20px;
-    top:-10px;
+    height: 20px; top:-10px;
 }
 ul.slick-dots li button {
     width: 14px;
@@ -670,7 +663,7 @@ ul.slick-dots li button {
     background: url("https://www.daybreaker.com/wp-content/themes/dybrkr/images/08-Homepage-Slide-Show-Arrow-back.png") no-repeat;
     background-size: contain;   /* Use this because the image is by default larger than the rendered size */
     width: 25px; height: 30px;
-    position: absolute; top: 107.5%; left: 10%
+    position: absolute; top: 107.5%; left: 10%;
 }
 .slick-arrow.next {
     background: url("https://www.daybreaker.com/wp-content/themes/dybrkr/images/08-Homepage-Slide Show-Arrow.png") no-repeat;
@@ -688,6 +681,9 @@ ul.slick-dots li button {
 }
     /* Responsiveness: 0-1024px, 1024px+                    */
 @media (min-width: 1024px) {
+    .slider-section {
+        padding-bottom: 100px;
+    }
     .slider-img {
         max-width: 69%;
         margin: 0 auto;
@@ -701,20 +697,29 @@ ul.slick-dots li button {
         width: 37px; height: 69px;
         top: 45%; right: 10%;
     }
-    .slider-detail {
-        width: 50%; height: 30%;
-        left: 25%; right: 25%;
-    }
+
     /* At larger widths, display the captions to the dots. These are hidden at smaller widths*/
     .slick-slider .slick-dots li p {
         display: inline;
-    }
-    ul.slick-dots::before {
-        top: -5px;                 /* Keep the connecting line correctly positioned. Appearance of text requires adjusting this. */
+        font-size: 1.2rem; font-weight: 300;
     }
     ul.slick-dots li {
         height: 50px;
     }
+    /* Box that hovers over each image */
+    .slider-detail {
+        width: 55%; height: 30%;
+        left: 22.5%; right: 22.5%;
+    }
+    .slider-content-right { max-width: 70%; }
+    .slider-number {
+        border: 6px solid red;      /* At larger screen sizes, increase width of border */
+        width: 75px; height: 75px;
+        margin-left: 5%; margin-right: 5%;
+        font-size: 3.2rem;
 
+    }
+    .slider-title { font-size: 2.5rem; }
+    .slider-subtext { font-size: 1.2rem; line-height: 1.5rem; }
 }
 
