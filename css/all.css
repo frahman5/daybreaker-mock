@@ -138,15 +138,14 @@ header {
     div.header-right-container:hover > nav {
         display: block;
         position: absolute;
-        top: 10vh; height: fit-content;
+        height: fit-content;
         left: 0; right: 0;
         background: #F6F6F6;
 
     }
     div.header-right-container:hover > nav > ul {
         flex-direction: column;
-        font-size: 2.2rem;
-        font-weight: 300;
+        font-size: 2.2rem; font-weight: 300;
         text-align: center;
     }
     div.header-right-container:hover > nav > ul > li > a {
@@ -239,7 +238,7 @@ header {
         height: 1.4rem;
     }
     .header-right-container > nav > ul {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 #header-mobile-menu {
