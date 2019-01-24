@@ -102,7 +102,7 @@ p {
 header {
     /* Position, size, color */
     position: fixed; top: 0; z-index: 100; /* Make it sticky to the top of the screen */
-    height: 10vh; width: 100vw;
+    width: 100vw;                          /* Leave height to responsive.css */
     background-color: white;
 
     /* Alignment */
@@ -117,13 +117,13 @@ header {
 @media (min-width: 600px) {
     .header-logo {
         width: 339px;
-        height: 6vh;
+        max-height: 75%;
     }
 }
     /* Hold Nav + Tix button in a container so we can lay them out together using flexbox */
 .header-right-container {
     /* Size it right for small screens */
-    width: 180px; height: 10vh;
+    width: 180px;
 
     /* Align the nav and Tix button appropriately */
     display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center;

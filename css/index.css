@@ -46,7 +46,7 @@ center the splash content */
 .idx-hero > main {
     /* Occupy the entire below-nav/above-the-fold space */
     position: absolute;
-    top: 10vh; left: 0; right: 0; bottom: 0; /*Top is 10vh because that's the height of the header */
+    left: 0; right: 0; bottom: 0; /* Leave top to responsive.css, since it's determined by height of header */
 }
 /* Center items horizontally within the splash area */
 .splash-container {
