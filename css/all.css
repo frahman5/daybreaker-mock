@@ -73,7 +73,7 @@ h1 {
 }
 h2 {
     font-size: 3vw;
-    font-weight: 200;
+    font-weight: 300;           /* 300 is carefulyl chosen to look good on both chrome and safari. at 200, it's perfect on chrome but too light on safari */
     letter-spacing: .4rem;
     line-height: 2.5rem;
     color: #DCDCDC;
@@ -82,7 +82,7 @@ h2 {
 }
 h3 {
     font-size: 2.5vw;
-    font-weight: 200;
+    font-weight: 300;           /* See note on h2 font-weight */
     letter-spacing: .3rem;
     color: #D8D8D8;
 
