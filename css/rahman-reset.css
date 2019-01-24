@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-font-smoothing: subpixel-antialiased; /* Fixes problem wherein safari renders text much lighter than other browsers */
+    -webkit-font-smoothing: antialiased; /* Fixes edginess of font rendering on safari */
 }
 
 h1, h2, h3, h4, h5, h5 {
