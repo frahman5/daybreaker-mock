@@ -12,7 +12,7 @@
     background-repeat: no-repeat; background-position: center;
 
     /* Sizing */
-    width: 100vw; height: 60vh;
+    width: 100vw; height: 70vh;
 }
     /*********** VIDEO ***********/
 /* At the smallest screen sizes, we use a background image, no video. At 760px, we
@@ -46,16 +46,15 @@ center the splash content */
 .idx-hero > main {
     /* Occupy the entire below-nav/above-the-fold space */
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 10vh; left: 0; right: 0; bottom: 0; /*Top is 10vh because that's the height of the header */
 }
 /* Center items horizontally within the splash area */
 .splash-container {
     position: absolute; /* Draw this OVER blk-overlay, rather than after it */
-    top: 12vh;
     text-align: center; /* For when text wraps to a second line */
 }
 .splash-container > img {
-    width: 18vw; margin-bottom:4rem;
+    width: 12vw; margin-bottom:4rem;
 }
 #splashdetail1break {
     display: inline; /* At smaller screen sizes, there should be a line break */
