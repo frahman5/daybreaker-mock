@@ -18,7 +18,35 @@ ul {
 }
 
 button {
-    border-color: none;
-    border-style: none;
-    border-width: 0;
+    border: none;
+    cursor: pointer;
+    transition: background 250ms ease-in-out;
+    transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:focus {
+    outline: 0px solid #fff;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+a:link {
+/* no underline */
+    text-decoration: none !important;
+}
+a:hover {
+    /* no underline */
+    text-decoration: none !important;
+}
+a:visited {
+    /* no underline */
+    text-decoration: none !important;
+}
+a:active {
+    /* no underline */
+    text-decoration: none !important;
 }

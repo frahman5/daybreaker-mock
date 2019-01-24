@@ -11,7 +11,7 @@
 }
 
 /* Basic Column flexbox */
-.col-center-center-flexbox {
+.col-center-center-wrap-flexbox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
 }
 
 /* Basic Row flexbox */
-.row-center-center-flexbox {
+.row-center-center-wrap-flexbox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,4 +40,9 @@
     margin: 2rem auto;
     max-width: 80%;
     line-height: 1.3;
+}
+
+/* Uppercase text */
+.uppercase {
+    text-transform: uppercase;
 }

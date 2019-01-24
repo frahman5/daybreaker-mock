@@ -8,33 +8,24 @@
 /******************************  HERO ******************************************/
 .idx-hero {
     /* Bckground */
-    background-image: url("../assets/img/dybrkr_home_background_image.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("../assets/img/dybrkr_home_background_image.jpg"); background-size: cover;
+    background-repeat: no-repeat; background-position: center;
 
     /* Sizing */
-    width: 100vw;
-    height: 60vh;
+    width: 100vw; height: 60vh;
 }
-    /*********** HANDLING THE VIDEO ***********/
+    /*********** VIDEO ***********/
 /* At the smallest screen sizes, we use a background image, no video. At 760px, we
-switch to the vdeio. At 1280px, we fix the height of the video so that it doesn't
+switch to the video. At 1280px, we fix the height of the video so that it doesn't
 grow outside of its container in an attempt to preserve its aspect ratio. */
-.idx-hero > video {
-    display: none;
-}
+.idx-hero > video { display: none; }
 @media (min-width: 760px) {
     .idx-hero > video {
-        width: 100vw;
-        display: block;
-        object-fit: fill;
-        object-position: center;
+        width: 100vw; display: block;
+        object-fit: fill; object-position: center;
     }
-
     .idx-hero {
         background-image: none;
-
         /* Take up however much space it needs for content, and no more.
         This ensures you don't have weird mismatches when the video is
         shorter than the full viewport height (minus the header) due to
@@ -48,33 +39,23 @@ grow outside of its container in an attempt to preserve its aspect ratio. */
         height: 90vh;
     }
 }
-    /********** MAIN HERO *********************/
+
+    /********** MAIN HERO; HERO AT SMALL SCREEN SIZES *********************/
 /* The purpose of the <main> container is to hold the necessary space to properly
 center the splash content */
 .idx-hero > main {
     /* Occupy the entire below-nav/above-the-fold space */
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-
-    /* Center the splash content within itself */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 /* Center items horizontally within the splash area */
 .splash-container {
     position: absolute; /* Draw this OVER blk-overlay, rather than after it */
-
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-
-    text-transform: uppercase;
+    top: 12vh;
     text-align: center; /* For when text wraps to a second line */
 }
 .splash-container > img {
-    width: 18vw;
-    margin-bottom:4rem;
+    width: 18vw; margin-bottom:4rem;
 }
 #splashdetail1break {
     display: inline; /* At smaller screen sizes, there should be a line break */
@@ -87,6 +68,7 @@ center the splash content */
     background-color: white;
     max-width: 90%;
 }
+
     /*** HERO AT MIDDLE TO LARGE SCREEN SIZES **/
 @media (min-width: 700px) {
     .splash-container > img {
@@ -94,108 +76,26 @@ center the splash content */
         margin-bottom: 3rem;
     }
     h1 {
-        font-size: 7rem;
-        font-weight: 500;
-        letter-spacing: 2.5px;
-        line-height: 1;
-
+        font-size: 7rem; font-weight: 500; letter-spacing: 2.5px; line-height: 1;
         margin-bottom: 2rem;
     }
-    h2 {
-        font-size: 2rem;
-    }
-    h3 {
-        font-size: 1.25rem;
-    }
-    #splashdetail1break {
-        display: none; /* At larger screen sizes, no line break here */
-    }
-    #splashdetailverticalbar {
-        display: inline; /* At larger screen sizes, display this seperator */
-    }
-    .splash-h2-vertbar {
-        vertical-align: text-top;
-    }
-    #form-standin-homepage {
-        padding: 20px 300px;
-    }
-}
-
-/***************************** NEWSLETTER FORMS *****************************/
-.idx-newsletter-form {
-    height: 50px;
-    width: 98%;
-
-    display: flex;
-    justify-content: center;
-    flex-flow: row nowrap;
-}
-.idx-newsletter-form-email {
-    width: 70%;
-    border-bottom-left-radius: 2px;
-    border-top-left-radius: 2px;
-
-    font-size: 1.8rem;
-    font-weight: 100;
-    padding-left: 20px;
-    color: red;
-}
-.idx-preftr-newsletter-form-email {
-    background-color: #F7F7F7;
-    color: #9B9B9B; font-size: 1.5rem; letter-spacing: 0.038rem;
-}
-.idx-newsletter-form-email:focus, .idx-newsletter-form-btn:focus {
-    outline: none
-}
-.idx-hero-newsletter-form-email::placeholder {
-    color: #D8D8D8;
-}
-.idx-newsletter-form-btn {
-    background-color: #50e3c2;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-weight: 400;
-    font-size: 1.6rem;
-
-    width: 30%;
-    color: white;
-
-    border-bottom-right-radius: 2px;
-    border-top-right-radius: 2px;
-}
-.idx-newsletter-form-btn:hover {
-    background-color: #000000;
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.25rem; }
+    #splashdetail1break { display: none; /* At larger screen sizes, no line break here */ }
+    #splashdetailverticalbar { display: inline; /* At larger screen sizes, display this seperator */ }
+    .splash-h2-vertbar { vertical-align: text-top; }
+    #form-standin-homepage { padding: 20px 300px; }
 }
 
 /*********************** LET'S BE FRIENDS *************************************/
-.lets-be-friends {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row nowrap;
-    padding: 1vw;
-
-}
-.lets-be-friends img {
-    height: 18vw;
-}
-.mobile-off {
-    display: none;
-}
-.mobile-on {
-    margin-left: 5px; margin-right: 5px;
-}
+.lets-be-friends { padding: 1vw; }
+.lets-be-friends img { height: 18vw; }
+.mobile-off { display: none; }
+.mobile-on { margin: 0 5px; }
 @media (min-width: 736px) {
-    .mobile-off {
-        display: inline-block;
-    }
-    .mobile-on {
-        display: none;
-    }
-
-    .lets-be-friends img {
-        height: 11vw;
-    }
+    .mobile-off { display: inline-block; }
+    .mobile-on { display: none; }
+    .lets-be-friends img { height: 11vw; }
 }
 
 /*********************** MORE MISCHIEF *************************************/
@@ -204,8 +104,7 @@ center the splash content */
     background-image: url("../assets/img/mm-section-bg.jpg");
 
     /* Put some space between this section and the ones below and above it */
-    padding-top: 25px;
-    padding-bottom: 50px;
+    padding-top: 25px; padding-bottom: 50px;
 }
     /* Flexbox Container for cards */
 .idx-mm-container {
@@ -215,8 +114,7 @@ center the splash content */
     justify-content: space-between;
 
     width: 90%;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto 0px auto;
 }
     /* Basic styling for the horizontal and vertical card containers */
 .mm-horizontal-card {
@@ -249,11 +147,8 @@ center the splash content */
 }
 h1.mm-card-title {
     color: black;
-    font-size: 5.4vw;
-    letter-spacing: .3vw;
-    text-transform: uppercase;
-    line-height: 1.5;
-    font-weight: 400;
+    font-size: 5.4vw; font-weight: 400;
+    letter-spacing: .3vw; text-transform: uppercase; line-height: 1.5;
     margin-bottom: 0;
 }
 h2.mm-card-subtitle {
@@ -263,10 +158,9 @@ h2.mm-card-subtitle {
     display: flex; flex-direction: row; justify-content: center; /* centers the text better than text-align */
 }
 button.mm-card-button {
-    font-size: 1.7vh;
+    font-size: 1.7vh; font-weight: 400;
     padding: 1.5vh 3.5vw 1.5vh;
     letter-spacing: .2vw;
-    font-weight: 400;
 }
     /* At smaller screen sizes, don't show the 3rd vertical card */
 .idx-mm-container div:nth-child(4) {
@@ -280,21 +174,7 @@ button.mm-card-button {
 .mm-vert-card > h2.mm-card-subtitle {
     min-height: 120px;
 }
-/*@media (min-width: 410px) {*/
-    /*.mm-vert-card > h2.mm-card-subtitle {*/
-        /*min-height: 180px;*/
-    /*}*/
-/*}*/
-/*@media (min-width: 580px) {*/
-    /*.mm-vert-card > h2.mm-card-subtitle {*/
-        /*min-height: 210px;*/
-    /*}*/
-/*}*/
-/*@media (min-width: 750px) {*/
-    /*.mm-vert-card > h2.mm-card-subtitle {*/
-        /*min-height: 160px;*/
-    /*}*/
-/*}*/
+
     /* At 736px, switch up the layout and adjust styles as needed */
 @media (min-width: 736px) {
     /* Swap the horizontal card for a third vertical card */
