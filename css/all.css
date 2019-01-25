@@ -313,6 +313,7 @@ footer {
     text-transform: uppercase;
 }
 .ftr-nav > li {
+    color: white;
     padding: 10px 15px;
     font-size: 9px; font-weight: 100;
 }
