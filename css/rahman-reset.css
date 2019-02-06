@@ -5,7 +5,12 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased; /* Fixes edginess of font rendering on safari */
     -webkit-appearance: none;            /* Should prevent iOS from rendering buttons in default iOS styles rather than coded styles */
-    -moz-appearance: none;               /* ibid. */
+    -moz-appearance: none;               /* ibid, for other browsers*/
+    /* Reset border radius to prevent default border radii from taking hold */
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px
 }
 
 h1, h2, h3, h4, h5, h5 {
