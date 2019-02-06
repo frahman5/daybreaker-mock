@@ -271,7 +271,7 @@ blockquote:after {
     /* At 736px, redo layout and some details of the inner contents */
 @media (min-width: 736px) {
     .rn-card-bq {
-        font-size: 2rem;
+        font-size: 1.9rem; /* Make it 1.9rem because at 2rem, the text falls outside of the box at 1458px */
         margin: 10px;
     }
     .rn-row-1-card { width: 30%; }
